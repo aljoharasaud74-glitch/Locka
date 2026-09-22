@@ -1,0 +1,253 @@
+/* إعدادات عامة وتنسيق الخطوط */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', 'Poppins', sans-serif;
+}
+
+body.login-body {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('locka-bg.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    direction: rtl;
+    padding: 20px;
+}
+
+/* 1. البطاقة البيضاء الخاصة بصفحات الدخول فقط (تسجيل الدخول، الاستعادة، الخ) */
+.login-container {
+    background: #ffffff;
+    padding: 45px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    margin: 20px;
+}
+
+/* 2. شاشة البداية (index.html) بدون أي خلفية بيضاء وتظهر صورة الخزانات خلفها مباشرة */
+.hero-content {
+    background: transparent;
+    padding: 20px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* تنسيق أيقونة القفل الفخمة في شاشة البداية */
+.hero-lock-icon {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 16px;
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.hero-lock-icon svg {
+    width: 48px;
+    height: 48px;
+    display: block;
+}
+
+/* عناوين شاشة البداية بلون أبيض بارز فوق الخلفية */
+.hero-content .brand-title {
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.hero-content .welcome-subtext {
+    color: #f7fafc;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.6);
+}
+
+/* زر "ابدأ الآن" الخاص بشاشة البداية */
+.hero-content .cta-button {
+    display: inline-block;
+    width: 100%;
+    max-width: 220px;
+    padding: 14px;
+    background-color: #0F2A4A;
+    color: white;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+}
+
+.hero-content .cta-button:hover {
+    background-color: #39639E;
+    transform: translateY(-2px);
+}
+
+/* الشعار والأيقونات العامة للبطاقات البيضاء الأخرى */
+.small-logo-icon svg {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.brand-title {
+    color: #39639E;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.welcome-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2D3748;
+    margin-bottom: 8px;
+}
+
+.welcome-subtext {
+    font-size: 14px;
+    color: #718096;
+    margin-bottom: 25px;
+}
+
+/* حقول الإدخال لصفحات الدخول */
+.input-group {
+    margin-bottom: 20px;
+    text-align: right;
+    width: 100%;
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding: 14px 45px 14px 15px;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+    background: #F7FAFC;
+}
+
+.input-with-icon input:focus {
+    border-color: #39639E;
+    background: #ffffff;
+}
+
+/* خانات رمز التحقق OTP */
+.otp-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    direction: ltr;
+}
+
+.otp-input {
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    background: #F7FAFC;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.otp-input:focus {
+    border-color: #39639E;
+    background: #ffffff;
+}
+
+/* الأزرار العامة لصفحات الدخول */
+.submit-button {
+    display: inline-block;
+    width: 100%;
+    padding: 14px;
+    background-color: #0F2A4A;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.submit-button:hover {
+    background-color: #39639E;
+}
+
+.forgot-link, .register-link {
+    color: #39639E;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.forgot-link:hover, .register-link:hover {
+    text-decoration: underline;
+}
+
+.register-prompt {
+    font-size: 14px;
+    color: #718096;
+    margin-top: 20px;
+}
+
+/* التجاوب التلقائي مع شاشات الجوالات */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px 20px;
+        margin: 15px;
+    }
+
+    .hero-content .brand-title {
+        font-size: 30px;
+    }
+
+    .hero-content .welcome-subtext {
+        font-size: 16px;
+    }
+
+    .otp-input {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}

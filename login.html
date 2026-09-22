@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCKA - تسجيل الدخول</title>
+
+    <!-- روابط الخطوط من جوجل -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ربط ملف التصميم الخارجي -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-body">
+
+    <div class="login-container">
+        
+        <!-- رأس الصفحة والشعار -->
+        <div class="login-header">
+            <div class="small-logo-icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 45V32C30 20 39 10 50 10C61 10 70 20 70 32V45" fill="none" stroke="#39639E" stroke-width="8" stroke-linecap="round"/>
+                    <rect x="20" y="40" width="60" height="48" rx="10" fill="#39639E"/>
+                    <circle cx="50" cy="60" r="6" fill="white"/>
+                    <rect x="47" y="60" width="6" height="15" rx="3" fill="white"/>
+                </svg>
+            </div>
+            <h2 class="brand-title">LOCKA</h2>
+            
+            <p class="welcome-text">مرحباً بك</p>
+            <p class="welcome-subtext">للمتابعة يرجى تسجيل الدخول</p>
+        </div>
+
+        <!-- نموذج تسجيل الدخول مع ربط الانتقال -->
+        <form class="login-form" onsubmit="event.preventDefault(); window.location.href='index.html';">
+            
+            <!-- حقل الاسم الكامل -->
+            <div class="input-group">
+                <div class="input-with-icon">
+                    <span class="input-icon">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="#718096" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </span>
+                    <input type="text" placeholder="أدخل اسمك الكامل" required>
+                </div>
+            </div>
+
+            <!-- حقل الرقم الجامعي -->
+            <div class="input-group">
+                <div class="input-with-icon">
+                    <span class="input-icon">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="#718096" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </span>
+                    <input type="text" placeholder="أدخل رقمك الجامعي" required>
+                </div>
+            </div>
+
+            <!-- حقل كلمة المرور -->
+            <div class="input-group">
+                <div class="input-with-icon">
+                    <span class="input-icon">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="#718096" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.778-7.778zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>
+                    </span>
+                    <input type="password" placeholder="أدخل كلمة المرور" required>
+                </div>
+            </div>
+
+            <!-- زر تسجيل الدخول -->
+            <button type="submit" class="submit-button">تسجيل الدخول</button>
+
+            <!-- رابط نسيت كلمة المرور -->
+            <a href="forgot-password.html" class="forgot-link">نسيت كلمة المرور؟</a>
+
+            <!-- رابط إنشاء حساب جديد (مربوط بصفحة register.html) -->
+            <p class="register-prompt">
+                ليس لديك حساب؟ <a href="register.html" class="register-link">إنشاء حساب جديد</a>
+            </p>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

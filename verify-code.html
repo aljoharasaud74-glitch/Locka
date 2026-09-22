@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCKA - تأكيد رمز التحقق</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-body">
+
+    <div class="login-container">
+        
+        <div class="login-header">
+            <div class="small-logo-icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 45V32C30 20 39 10 50 10C61 10 70 20 70 32V45" fill="none" stroke="#39639E" stroke-width="8" stroke-linecap="round"/>
+                    <rect x="20" y="40" width="60" height="48" rx="10" fill="#39639E"/>
+                    <circle cx="50" cy="60" r="6" fill="white"/>
+                    <rect x="47" y="60" width="6" height="15" rx="3" fill="white"/>
+                </svg>
+            </div>
+            <h2 class="brand-title">LOCKA</h2>
+            
+            <p class="welcome-text">أدخل رمز التحقق</p>
+            <p class="welcome-subtext">تم إرسال OTP إلى الرقم المسجل</p>
+        </div>
+
+        <form class="login-form">
+            
+            <div class="otp-container">
+                <input type="text" maxlength="1" class="otp-input" autofocus>
+                <input type="text" maxlength="1" class="otp-input">
+                <input type="text" maxlength="1" class="otp-input">
+                <input type="text" maxlength="1" class="otp-input">
+            </div>
+
+            <button type="submit" class="submit-button">تأكيد الرمز</button>
+
+            <p class="register-prompt" style="margin-top: 20px;">
+                لم تستلم الرمز؟ <a href="#" class="register-link">إعادة الإرسال</a>
+            </p>
+
+        </form>
+
+    </div>
+
+    <script>
+        const inputs = document.querySelectorAll('.otp-input');
+
+        inputs.forEach((input, index) => {
+            input.addEventListener('input', (e) => {
+                const value = e.target.value;
+                if (value && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+            });
+
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && !input.value && index > 0) {
+                    inputs[index - 1].focus();
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
